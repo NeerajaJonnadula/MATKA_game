@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> MATKA KING Game</title>
+  <link rel="icon" href="./logo.jpg">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <video autoplay muted loop>
+    <source src="./bck.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="container">
+    <h1> $ MATKA KING $ </h1>
+    <div class="initial-balance">
+      <label for="initialBalance">Enter your starting balance:</label><br>
+      <input type="number" id="initialBalance" min="1" value="100">
+      <button onclick="setBalance()">Set Balance</button>
+    </div>
+    <div class="balance" style="display: none;">Balance: $<span id="balance">0</span></div>
+    <div class="bet" style="display: none;">
+      <label for="betAmount">Bet Amount:</label><br>
+      <input type="number" id="betAmount" min="1" value="1">
+    </div>
+    <div class="reels" style="display: none;">
+      <div id="reel1">🎁</div>
+      <div id="reel2">🎁</div>
+      <div id="reel3">🎁</div>
+    </div>
+    <button onclick="spinReels()" style="display: none;" id="spinButton">Spin</button>
+    <div class="result" id="result"></div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
